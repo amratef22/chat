@@ -1,4 +1,5 @@
 import 'package:chaty_app/firebase_options.dart';
+import 'package:chaty_app/views_screens/chat_page.dart';
 import 'package:chaty_app/views_screens/login_page.dart';
 import 'package:chaty_app/views_screens/register_page.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -20,8 +21,9 @@ class Chaty extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        'LoginScreen': (context) => LoginScreen(),
+        LoginScreen.id: (context) =>  LoginScreen(),
         RegisterScreen.id: (context) => RegisterScreen(),
+        ChatScreen.id: (context) => ChatScreen(),
       },
       initialRoute: 'LoginScreen',
     );
